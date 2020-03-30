@@ -11,5 +11,8 @@
   "repository": "https://github.com/timothylevi/language-foodscript",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "tree-sitter-foodscript": "^1.0.0"
   }
 }
