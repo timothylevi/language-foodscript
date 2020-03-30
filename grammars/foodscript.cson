@@ -1,0 +1,57 @@
+name: 'FoodScript'
+scopeName: 'source.foodscript'
+type: 'tree-sitter'
+parser: 'tree-sitter-foodscript'
+fileTypes: [ 'fs' ]
+
+folds: [
+  {
+    type: ['if_statement']
+    start: {type: '\n'}
+    end: {type: ['else_if_clause', 'else_clause']}
+  },
+  {
+    type: [
+      'if_statement'
+      'else_if_clause'
+      'else_clause'
+      # 'for_statement'
+      # 'while_statement'
+      # 'class_definition'
+      # 'function_definition'
+    ]
+    start: {type: ':'}
+  },
+  {
+    start: {type: '(', index: 0}
+    end: {type: ')', index: -1}
+  },
+  {
+    start: {type: '[', index: 0}
+    end: {type: ']', index: -1}
+  },
+  {
+    start: {type: '{', index: 0}
+    end: {type: '}', index: -1}
+  }
+]
+
+comments:
+  start: '# '
+
+scopes:
+  'comment': 'comment.line'
+  'string': 'string.quoted'
+  'command': 'function'
+  'command > variable': 'variable'
+  'assignment > variable': 'variable'
+  'built_in_object': 'builtin.name'
+
+  '"if"': 'keyword.control'
+  '"else"': 'keyword.control'
+  '"else if"': 'keyword.control'
+  '"get"': 'keyword.control'
+  '"complete"': 'keyword.control'
+  '"in"': 'keyword.control'
+
+  '"log"': 'function'
