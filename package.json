@@ -1,6 +1,6 @@
 {
   "name": "language-foodscript",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,5 +9,7 @@
   "author": "",
   "license": "ISC",
   "repository": "https://github.com/timothylevi/language-foodscript",
-  "engines": {"atom": ">=1.0.0 <2.0.0"}
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
 }
