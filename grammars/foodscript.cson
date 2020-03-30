@@ -42,16 +42,16 @@ comments:
 scopes:
   'comment': 'comment.line'
   'string': 'string.quoted'
-  'command': 'function'
-  'command > variable': 'variable'
-  'assignment > variable': 'variable'
+  'command': 'entity.name.function'
+  'command > variable': 'variable.parameter'
+  'assignment > variable': 'variable.parameter'
   'built_in_object': 'builtin.name'
+  'type': 'entity.name.type'
 
   '"if"': 'keyword.control'
   '"else"': 'keyword.control'
   '"else if"': 'keyword.control'
-  '"get"': 'keyword.control'
+  '"get"': 'keyword.control.import'
   '"complete"': 'keyword.control'
   '"in"': 'keyword.control'
-
   '"log"': 'function'
