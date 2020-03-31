@@ -10,9 +10,10 @@
   'start': '# '
 
 'scopes':
+  'if_statement': 'keyword.control'
+  
   # 'program': 'source.foodscript'
 
-  '"if"': 'keyword.control'
   # '"else if"': 'keyword.control'
   # '"else"': 'keyword.control'
   # '"complete"': 'keyword.control'
