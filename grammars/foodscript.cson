@@ -3,27 +3,27 @@
 'fileTypes': [
   'fs'
 ]
-'type': 'tree-sitter'
 'parser': 'tree-sitter-foodscript'
+'type': 'tree-sitter'
 
 'comments':
   'start': '# '
 
 'scopes':
-  'program': 'source.ruby'
+  # 'program': 'source.foodscript'
 
   '"if"': 'keyword.control'
-  '"else if"': 'keyword.control'
-  '"else"': 'keyword.control'
-  '"complete"': 'keyword.control'
-  '"for"': 'keyword.control'
-  '"in"': 'keyword.control'
-
-  'comment': 'comment'
-  'string': 'string.quoted'
-
-  'type': 'entity.name.type.class'
-
-  'command > variable, command > built_in_object': 'entity.name.function'
-
-  'assignment > variable': 'variable'
+  # '"else if"': 'keyword.control'
+  # '"else"': 'keyword.control'
+  # '"complete"': 'keyword.control'
+  # '"for"': 'keyword.control'
+  # '"in"': 'keyword.control'
+  #
+  # 'comment': 'comment'
+  # 'string': 'string.quoted'
+  #
+  # 'type': 'entity.name.type.class'
+  #
+  # 'command > variable, command > built_in_object': 'entity.name.function'
+  #
+  # 'assignment > variable': 'variable'
