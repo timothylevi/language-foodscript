@@ -1,57 +1,29 @@
-name: 'FoodScript'
-scopeName: 'source.foodscript'
-type: 'tree-sitter'
-parser: 'tree-sitter-foodscript'
-fileTypes: [ 'fs' ]
-
-folds: [
-  {
-    type: ['if_statement']
-    start: {type: '\n'}
-    end: {type: ['else_if_clause', 'else_clause']}
-  },
-  {
-    type: [
-      'if_statement'
-      'else_if_clause'
-      'else_clause'
-      # 'for_statement'
-      # 'while_statement'
-      # 'class_definition'
-      # 'function_definition'
-    ]
-    start: {type: ':'}
-  },
-  {
-    start: {type: '(', index: 0}
-    end: {type: ')', index: -1}
-  },
-  {
-    start: {type: '[', index: 0}
-    end: {type: ']', index: -1}
-  },
-  {
-    start: {type: '{', index: 0}
-    end: {type: '}', index: -1}
-  }
+'scopeName': 'source.foodscript'
+'name': 'FoodScript'
+'fileTypes': [
+  'fs'
 ]
+'type': 'tree-sitter'
+'parser': 'tree-sitter-foodscript'
 
-comments:
-  start: '# '
+'comments':
+  'start': '# '
 
-scopes:
-  'comment': 'comment.line'
-  'string': 'string.quoted'
-  'command': 'entity.name.function'
-  'command > variable': 'variable.parameter'
-  'assignment > variable': 'variable.parameter'
-  'built_in_object': 'builtin.name'
-  'type': 'entity.name.type'
+'scopes':
+  'program': 'source.ruby'
 
   '"if"': 'keyword.control'
-  '"else"': 'keyword.control'
   '"else if"': 'keyword.control'
-  '"get"': 'keyword.control.import'
+  '"else"': 'keyword.control'
   '"complete"': 'keyword.control'
+  '"for"': 'keyword.control'
   '"in"': 'keyword.control'
-  '"log"': 'function'
+
+  'comment': 'comment'
+  'string': 'string.quoted'
+
+  'type': 'entity.name.type.class'
+
+  'command > variable, command > built_in_object': 'entity.name.function'
+
+  'assignment > variable': 'variable'
